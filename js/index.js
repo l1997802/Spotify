@@ -11,6 +11,12 @@ var $aside = $(".topbar-aside-bg")
 var asideScroll = new BScroll($aside[0],{
   scrollY: true
 })
+var $topbarItems = $(".topbar-aside").children();
+$topbarItems.each(function(i,val){
+  0.2 - ($topbarItems.length - i)
+  var delay = ((0.2) * 1000 + (0.015 * i) * 1000) / 1000
+  $(val).css("animation-delay", delay + "s")
+})
 $toggle.on('click',function(){
   if(!toggleFlag){
     return false;
@@ -25,8 +31,11 @@ $toggle.on('click',function(){
     $($spans[0]).addClass('rotate-minus-45')
     $(".person-avatar").fadeTo(200,0)
     $(".topbar-logo-sm").fadeTo(200,0)
-    $aside.removeClass('topbar-bg-move-back hide')
+    $aside.removeClass('topbar-bg-move-back')
     $aside.addClass('topbar-bg-move')
+    $topbarItems.each(function(i,val){
+      $(val).addClass("topbar-items-move")
+    })
   }else{
     $($spans[2]).removeClass('rotate-add-45')
     $($spans[1]).removeClass('invisible')
@@ -35,9 +44,9 @@ $toggle.on('click',function(){
     $(".topbar-logo-sm").fadeTo(200,1)
     $aside.removeClass('topbar-bg-move')
     $aside.addClass('topbar-bg-move-back')
-    window.setTimeout(function(){
-      $aside.addClass('hide')
-    },200)
+    $topbarItems.each(function(i,val){
+      $(val).removeClass("topbar-items-move")
+    })
   }
   toggle = !toggle;
   return false;
