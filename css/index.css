@@ -116,7 +116,6 @@
 .topbar-toggle{
   display: block;
   margin-left: 15px;
-  margin-right: 10px;
   overflow: hidden;
   width: 24px;
   height: 17px;
@@ -721,6 +720,7 @@ footer{
     line-height: 44px;
   }
 }
+/*footer部分结束*/
 /*class for animation*/
 body .hide{
   display: none;

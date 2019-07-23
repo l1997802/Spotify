@@ -53,6 +53,31 @@ url("./fonts/icofont.woff") format("woff");
   content: "\ed37";
 }
 
+.icofont-check:before
+{
+  content: "\eed8";
+}
+
+.icofont-search:before
+{
+  content: "\ed1b";
+}
+
+.icofont-simple-up:before
+{
+  content: "\eab9";
+}
+
+.icofont-error:before
+{
+  content: "\ef16";
+}
+
+.icofont-rounded-double-right:before
+{
+  content: "\ea98";
+}
+
 .icofont-xs
 {
   font-size: .5em;

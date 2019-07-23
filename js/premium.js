@@ -1,8 +1,3 @@
-var scroll = new BScroll($(".wrapper")[0],{
-  scrollX: true,
-  scrollY: true,
-  eventPassthrough: "vertical"
-})
 var $toggle = $('.topbar-toggle');
 var $spans = $toggle.children('span');
 var toggle = true;
