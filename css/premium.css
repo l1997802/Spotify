@@ -535,6 +535,7 @@ li{
 }
 .buy .premium:hover{
   background-color: #1ed760;
+  border-color: #1ed760;
 }
 .subscribe-links{
   box-shadow: 1px 1px 16px -2px rgba(0, 0, 0, 0.3);
