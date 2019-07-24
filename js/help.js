@@ -1,16 +1,22 @@
 var $toggle = $('.topbar-toggle');
 var $spans = $toggle.children('span');
 var toggle = true;
-var toggleFlag = true;
 var $aside = $(".topbar-aside-bg")
 var asideScroll = new BScroll($aside[0],{
-  scrollY: true
+  scrollY: true,
+  tap: "click"
 })
 var $topbarItems = $(".topbar-aside").children();
 $topbarItems.each(function(i,val){
+  if(val.href){
+    $(val).on("click",function(){
+      window.location.href = this.href;
+    })
+  }
   var delay = ((0.2) * 1000 + (0.015 * i) * 1000) / 1000
   $(val).css("animation-delay", delay + "s")
 })
+var toggleFlag = true;
 $toggle.on('click',function(){
   if(!toggleFlag){
     return false;
