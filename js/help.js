@@ -21,10 +21,11 @@ $toggle.on('click',function(){
   if(!toggleFlag){
     return false;
   }
+  $(".topbar-bg-sm").toggleClass("topbar-bg-sm-height");
   toggleFlag = false;
   window.setTimeout(function(){
     toggleFlag = true;
-  },200)
+  },500)
   if(toggle){
     $($spans[2]).addClass('rotate-add-45')
     $($spans[1]).addClass('invisible')
