@@ -191,11 +191,11 @@ li{
 }
 .topbar-aside-bg{
   /*flex-shrink不起作用*/
-  height: 100%;
   background-color: #000;
   transform: translateX(100%);
   transition: all .2s;
   opacity: 0;
+  height: 100%;
 }
 .topbar-aside{
   display: flex;
@@ -1028,28 +1028,34 @@ body .rotate-minus-45{
   0% {
     transform: translateX(20%);
     opacity: 0;
-    height: 100%;
   }
   100% {
     transform: translateX(0%);
     opacity: 1;
-    height: 100%;
   }
 }
 @keyframes topbar-bg-move-back{
   0% {
     transform: translateX(0%);
     opacity: 1;
-    height: 100%;
   }
   99% {
     transform: translateX(20%);
     opacity: 0;
-    height: 100%;
   }
   100% {
     transform: translateX(100%);
     opacity: 0;
+  }
+}
+@keyframes topbar-bg-sm-height-back{
+  0% {
+    height: 110%;
+  }
+  99% {
+    height: 110%;
+  }
+  100% {
     height: 54px;
   }
 }
@@ -1071,8 +1077,12 @@ body .rotate-minus-45{
   animation: topbar-bg-move-back .2s linear;
   animation-fill-mode: forwards;
 }
-.topbar-bg-sm-height{
-  height: 100%;
+.topbar-bg-sm-height-back{
+  animation: topbar-bg-sm-height-back .2s linear;
+  animation-fill-mode: forwards;
+}
+.topbar-bg-sm-height-change{
+  height: 110%;
 }
 .topbar-items-move{
   opacity: 0;

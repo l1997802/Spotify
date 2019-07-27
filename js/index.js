@@ -37,6 +37,7 @@ $toggle.on('click',function(){
     $($spans[0]).addClass('rotate-minus-45')
     $(".person-avatar").fadeTo(200,0)
     $(".topbar-logo-sm").fadeTo(200,0)
+    $(".topbar-bg-sm").addClass("topbar-bg-sm-height-change").removeClass("topbar-bg-sm-height-back");
     $aside.removeClass('topbar-bg-move-back').addClass('topbar-bg-move')
     $topbarItems.each(function(i,val){
       $(val).addClass("topbar-items-move")
@@ -47,6 +48,7 @@ $toggle.on('click',function(){
     $($spans[0]).removeClass('rotate-minus-45')
     $(".person-avatar").fadeTo(200,1)
     $(".topbar-logo-sm").fadeTo(200,1)
+    $(".topbar-bg-sm").removeClass("topbar-bg-sm-height-change").addClass("topbar-bg-sm-height-back");
     $aside.removeClass('topbar-bg-move').addClass('topbar-bg-move-back')
     $topbarItems.each(function(i,val){
       $(val).removeClass("topbar-items-move")
